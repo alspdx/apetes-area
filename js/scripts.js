@@ -18,12 +18,17 @@ Pizza.prototype.basePrice = function() {
 }
 
 Pizza.prototype.vegPrice = function() {
-  var veggieArray = this.veggies;
-  return veggieArray.length * (2)
+  var veggies = this.veggies;
+  return veggies.length * (1);
+}
+
+Pizza.prototype.meatPrice = function() {
+  var meats = this.meats;
+  return meats.length * (2);
 }
 
 Pizza.prototype.pizzaPrice = function() {
-  return (this.basePrice() + this.vegPrice())
+  return (this.basePrice() + this.vegPrice() + this.meatPrice())
 }
 
 
