@@ -36,6 +36,18 @@ Toppings for a large pizza will be 2x the magro pizza topping price
   * Example input: Grasso pizza with fennel sausage, goat cheese, potato, and pickled ramp
   * Expected output: 32
 
+## Setup
+
+Visit the webpage [here](https://alspdx.github.io/apetes-area/).
+
+Alternately you may [Clone this repository](https://github.com/alspdx/apetes-area).
+
+1. Click on the link above.
+2. Click the green button marked Clone or download.
+3. Click Download ZIP.
+4. Unzip file.
+5. Open index.html in Chrome or another web browser.
+
 ## Technologies used
 
 * Bootstrap 4
