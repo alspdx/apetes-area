@@ -45,3 +45,8 @@ h1, h3{
   border: 2px solid white;
   width: 100%;
 }
+
+.underline {
+  padding-bottom: 4em;
+  border-bottom: 2px solid white;
+}
