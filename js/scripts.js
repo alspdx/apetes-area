@@ -1,4 +1,4 @@
-var pizzaOrder
+var pizzaOrder;
 
 function Pizza (size, meats, veggies, cheeses){
   this.size = size;
@@ -22,13 +22,14 @@ Pizza.prototype.vegPrice = function() {
   return veggies.length * (1);
 }
 
-Pizza.prototype.meatPrice = function() {
+Pizza.prototype.meatCheesePrice = function() {
   var meats = this.meats;
-  return meats.length * (2);
+  var cheeses = this.cheeses;
+  return (meats.length + cheeses.length) * (2);
 }
 
 Pizza.prototype.pizzaPrice = function() {
-  return (this.basePrice() + this.vegPrice() + this.meatPrice())
+  return (this.basePrice() + this.vegPrice() + this.meatCheesePrice())
 }
 
 
@@ -50,7 +51,6 @@ $(function() {
     }).get();
     console.log(cheeseInput);
     pizzaOrder = new Pizza(sizeInput, meatsInput, veggiesInput, cheeseInput);
+    console.log(pizzaOrder.pizzaPrice());
   });
-
-
 });
