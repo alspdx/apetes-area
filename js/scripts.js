@@ -37,7 +37,7 @@ Pizza.prototype.meatCheesePrice = function() {
 }
 
 Pizza.prototype.pizzaPrice = function() {
-  return (this.basePrices() + ((this.vegPrice() + this.meatCheesePrice()) * this.pizzaToppingMultiplier()))
+  return (this.basePrices() + ((this.vegPrice() + this.meatCheesePrice()) * this.pizzaToppingMultiplier())).toFixed(2)
 }
 
 Pizza.prototype.toppingsOutput = function() {
