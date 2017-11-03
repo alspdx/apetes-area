@@ -29,39 +29,43 @@ Pizza.prototype.pizzaToppingMultiplier = function() {
 
 Pizza.prototype.vegPrice = function() {
   var veggies = this.veggies;
-  return veggies.length * (1 * this.pizzaToppingMultiplier());
+  return veggies.length;
 }
 
 Pizza.prototype.meatCheesePrice = function() {
   var meats = this.meats;
   var cheeses = this.cheeses;
-  return (meats.length + cheeses.length) * (2 + this.pizzaToppingMultiplier());
+  return (meats.length + cheeses.length) * 2;
 }
 
 Pizza.prototype.pizzaPrice = function() {
-  return (this.basePrices() + this.vegPrice() + this.meatCheesePrice())
+  return (this.basePrices() + ((this.vegPrice() + this.meatCheesePrice()) * this.pizzaToppingMultiplier()))
 }
 
 
 $(function() {
-  $("#order-pizza-input").submit(function(event) {
+  $("#display-form-button").click(function() {
+    $(".title-screen").slideToggle();
+    $(".pizza-order").slideToggle();
+  });
+
+
+  $("#order-input").submit(function(event) {
     event.preventDefault();
     var sizeInput = $("#size-input input:radio:checked").val();
-    console.log(sizeInput);
     var meatsInput = $("#meats-input input:checkbox:checked").map(function() {
       return $(this).val();
     }).get();
-    console.log(meatsInput);
     var veggiesInput = $("#veggies-input input:checkbox:checked").map(function() {
       return $(this).val();
     }).get();
-    console.log(veggiesInput);
     var cheeseInput = $("#cheese-input input:checkbox:checked").map(function() {
       return $(this).val();
     }).get();
-    console.log(cheeseInput);
     pizzaOrder = new Pizza(sizeInput, meatsInput, veggiesInput, cheeseInput);
-    console.log(pizzaOrder.pizzaPrice());
-    console.log(pizzaOrder.pizzaToppingMultiplier());
+    console.log(pizzaOrder)
+    $("#order-output").text(pizzaOrder.pizzaPrice());
+    $(".pizza-order").slideToggle();
+    $(".pizza-recall").slideToggle();
   });
 });

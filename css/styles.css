@@ -1,0 +1,47 @@
+body {
+  background-color: black;
+  font-family: 'Raleway', sans-serif;
+  color: white;
+}
+
+.header {
+  background: transparent;
+  padding-bottom: 4em;
+  border-bottom: 2px solid white;
+  margin-bottom: 6em;
+}
+
+h1, h3{
+  font-family: 'Poiret One', cursive;
+}
+
+.card {
+  background: transparent;
+}
+
+.header h1 {
+  font-size: 10em;
+}
+
+.title-image {
+  width: 100%;
+  height: auto;
+}
+
+.pizza-order, .pizza-recall {
+  display: none;
+}
+
+.welcome-button {
+  margin-top: 2em;
+}
+
+.button-style {
+  background: transparent;
+  margin-top: 4em;
+  font-size: 20px;
+  padding: 20px;
+  color: white;
+  border: 2px solid white;
+  width: 100%;
+}

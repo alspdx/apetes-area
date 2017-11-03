@@ -6,113 +6,145 @@
     <script src="js/scripts.js"></script>
     <link href="css/bootstrap.css" rel="stylesheet">
     <link href="css/styles.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Poiret+One|Raleway" rel="stylesheet">
     <title>A'Pete's Area</title>
   </head>
   <body>
-
-    <form id="order-pizza-input">
-
-      <div id="size-input">
-        <div class="form-check form-check-inline">
-          <label class="form-check-label">
-            <input class="form-check-input" type="radio" name="pizza-size" value="magro">
-            Magro
-          </label>
-        </div>
-        <div class="form-check form-check-inline">
-          <label class="form-check-label">
-            <input class="form-check-input" type="radio" name="pizza-size" value="mezzano">
-            Mezzano
-          </label>
-        </div>
-        <div class="form-check form-check-inline">
-          <label class="form-check-label">
-            <input class="form-check-input" type="radio" name="pizza-size" value="grasso">
-            Grasso
-          </label>
-        </div>
+    <div class="container">
+      <div class="header text-center">
+        <h1>A'Pete's Area</h1>
+        <p class="lead">A truly exceptional pizza experience</p>
       </div>
-
-      <div id="meats-input">
-        <div class="form-check">
-          <label class="form-check-label">
-            <input class="form-check-input" type="checkbox" value="prosciutto di parma">
-            Prosciutto di Parma
-          </label>
-          <label class="form-check-label">
-            <input class="form-check-input" type="checkbox" value="fennel sausage">
-            Fennel sausage
-          </label>
-          <label class="form-check-label">
-            <input class="form-check-input" type="checkbox" value="calabrese salami">
-            Calabrese salami
-          </label>
-          <label class="form-check-label">
-            <input class="form-check-input" type="checkbox" value="pancetta">
-            Pancetta
-          </label>
-          <label class="form-check-label">
-            <input class="form-check-input" type="checkbox" value="mortadella">
-            Mortadella
-          </label>
+    </div>
+    <div class="title-screen">
+      <img src="images/pizzaoven.jpg" class="title-image" alt="A pizza in our traditional wood fire oven">
+      <div class="col-md-6 offset-3 welcome-button text-center align-items-center justify-content-center">
+        <button type="button" class="button-style" id="display-form-button">ORDER NOW</button>
+      </div>
+    </div>
+    <div class="pizza-order text-center">
+      <h1>Order Form</h1>
+      <form id="order-input">
+        <div id="size-input">
+          <h3>Please select a pizza size:</h3>
+          <div class="form-check">
+            <label class="form-check-label">
+              <input class="form-check-input" type="radio" name="pizza-size" value="magro">
+              Magro (25cm)
+            </label>
+          </div>
+          <div class="form-check">
+            <label class="form-check-label">
+              <input class="form-check-input" type="radio" name="pizza-size" value="mezzano">
+              Mezzano (35cm)
+            </label>
+          </div>
+          <div class="form-check">
+            <label class="form-check-label">
+              <input class="form-check-input" type="radio" name="pizza-size" value="grasso">
+              Grasso (45cm)
+            </label>
+          </div>
         </div>
-      </div>
-
-      <div id="veggies-input">
-        <div class="form-check">
-          <label class="form-check-label">
-            <input class="form-check-input" type="checkbox" value="leeks">
-            Leeks
-          </label>
-          <label class="form-check-label">
-            <input class="form-check-input" type="checkbox" value="roasted potato">
-            Roasted potato
-          </label>
-          <label class="form-check-label">
-            <input class="form-check-input" type="checkbox" value="Mama Lil's peppers">
-            Mama Lil's peppers
-          </label>
-          <label class="form-check-label">
-            <input class="form-check-input" type="checkbox" value="garlic">
-            Garlic
-          </label>
-          <label class="form-check-label">
-            <input class="form-check-input" type="checkbox" value="Castelvetrano olives">
-            Castelvetrano olives
-          </label>
+        <div class="card-deck">
+          <div class="card">
+            <div class="card-body">
+              <h3 class="card-title">Carni</h3>
+              <div id="meats-input">
+                <div class="form-check">
+                  <label class="form-check-label">
+                    <input class="form-check-input" type="checkbox" value="prosciutto di parma">
+                    Prosciutto di Parma
+                  </label>
+                  <label class="form-check-label">
+                    <input class="form-check-input" type="checkbox" value="fennel sausage">
+                    Fennel sausage
+                  </label>
+                  <label class="form-check-label">
+                    <input class="form-check-input" type="checkbox" value="calabrese salami">
+                    Calabrese salami
+                  </label>
+                  <label class="form-check-label">
+                    <input class="form-check-input" type="checkbox" value="pancetta">
+                    Pancetta
+                  </label>
+                  <label class="form-check-label">
+                    <input class="form-check-input" type="checkbox" value="mortadella">
+                    Mortadella
+                  </label>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-body">
+              <h3 class="card-title">Verdure</h3>
+              <div id="veggies-input">
+                <div class="form-check">
+                  <label class="form-check-label">
+                    <input class="form-check-input" type="checkbox" value="leeks">
+                    Leeks
+                  </label>
+                  <label class="form-check-label">
+                    <input class="form-check-input" type="checkbox" value="roasted potato">
+                    Roasted potato
+                  </label>
+                  <label class="form-check-label">
+                    <input class="form-check-input" type="checkbox" value="Mama Lil's peppers">
+                    Mama Lil's peppers
+                  </label>
+                  <label class="form-check-label">
+                    <input class="form-check-input" type="checkbox" value="garlic">
+                    Garlic
+                  </label>
+                  <label class="form-check-label">
+                    <input class="form-check-input" type="checkbox" value="Castelvetrano olives">
+                    Castelvetrano olives
+                  </label>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-body">
+              <h3 class="card-title">Formaggi</h3>
+              <div id="cheese-input">
+                <div class="form-check">
+                  <label class="form-check-label">
+                    <input class="form-check-input" type="checkbox" value="mozzarella di bufala">
+                    Mozzarella di bufala
+                  </label>
+                  <label class="form-check-label">
+                    <input class="form-check-input" type="checkbox" value="taleggio">
+                    Taleggio
+                  </label>
+                  <label class="form-check-label">
+                    <input class="form-check-input" type="checkbox" value="robiola">
+                    Robiola
+                  </label>
+                  <label class="form-check-label">
+                    <input class="form-check-input" type="checkbox" value="pecorino romano">
+                    Pecorino Romano
+                  </label>
+                  <label class="form-check-label">
+                    <input class="form-check-input" type="checkbox" value="provolone piccante">
+                    Provolone piccante
+                  </label>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
+        <button type="submit" id="place-order-button" class="col-md-6 button-style">PLACE YOUR ORDER</button>
+      </form>
+    </div>
+
+    <div class="pizza-recall text-center">
+      <div>
+        <h1>Thank you for dining with us!</h1>
+        <p>Your order will cost $<span id="order-output"></span></p>
+
       </div>
-
-      <div id="cheese-input">
-        <div class="form-check">
-          <label class="form-check-label">
-            <input class="form-check-input" type="checkbox" value="mozzarella di bufala">
-            Mozzarella di bufala
-          </label>
-          <label class="form-check-label">
-            <input class="form-check-input" type="checkbox" value="taleggio">
-            Taleggio
-          </label>
-          <label class="form-check-label">
-            <input class="form-check-input" type="checkbox" value="robiola">
-            Robiola
-          </label>
-          <label class="form-check-label">
-            <input class="form-check-input" type="checkbox" value="pecorino romano">
-            Pecorino Romano
-          </label>
-          <label class="form-check-label">
-            <input class="form-check-input" type="checkbox" value="provolone piccante">
-            Provolone piccante
-          </label>
-        </div>
-      </div>
-
-      <div class="order-submit">
-        <button type="submit" name="button">Order</button>
-      </div>
-
-    </form>
-
+    </div>
   </body>
 </html>
