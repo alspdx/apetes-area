@@ -17,7 +17,14 @@ Pizza.prototype.basePrice = function() {
   }
 }
 
+Pizza.prototype.vegPrice = function() {
+  var veggieArray = this.veggies;
+  return veggieArray.length * (2)
+}
 
+Pizza.prototype.pizzaPrice = function() {
+  return (this.basePrice() + this.vegPrice())
+}
 
 
 $(function() {
@@ -39,7 +46,6 @@ $(function() {
     console.log(cheeseInput);
     pizzaOrder = new Pizza(sizeInput, meatsInput, veggiesInput, cheeseInput);
   });
-
 
 
 });
