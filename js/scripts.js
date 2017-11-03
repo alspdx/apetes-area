@@ -7,7 +7,7 @@ function Pizza (size, meats, veggies, cheeses){
   this.cheeses = cheeses;
 }
 
-Pizza.prototype.basePrice = function() {
+Pizza.prototype.basePrices = function() {
   if (this.size === "magro") {
     return 12
   } else if (this.size === "mezzano") {
@@ -17,19 +17,29 @@ Pizza.prototype.basePrice = function() {
   }
 }
 
+Pizza.prototype.pizzaToppingMultiplier = function() {
+  if (this.size === "magro") {
+    return 1
+  } else if (this.size === "mezzano") {
+    return 1.5
+  } else if (this.size === "grasso") {
+    return 2
+  }
+}
+
 Pizza.prototype.vegPrice = function() {
   var veggies = this.veggies;
-  return veggies.length * (1);
+  return veggies.length * (1 * this.pizzaToppingMultiplier());
 }
 
 Pizza.prototype.meatCheesePrice = function() {
   var meats = this.meats;
   var cheeses = this.cheeses;
-  return (meats.length + cheeses.length) * (2);
+  return (meats.length + cheeses.length) * (2 + this.pizzaToppingMultiplier());
 }
 
 Pizza.prototype.pizzaPrice = function() {
-  return (this.basePrice() + this.vegPrice() + this.meatCheesePrice())
+  return (this.basePrices() + this.vegPrice() + this.meatCheesePrice())
 }
 
 
@@ -52,5 +62,6 @@ $(function() {
     console.log(cheeseInput);
     pizzaOrder = new Pizza(sizeInput, meatsInput, veggiesInput, cheeseInput);
     console.log(pizzaOrder.pizzaPrice());
+    console.log(pizzaOrder.pizzaToppingMultiplier());
   });
 });
