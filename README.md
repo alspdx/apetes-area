@@ -24,15 +24,15 @@ Each vegetable topping will add $1 to a magro size pizza
   * Example input: Magro pizza with castelvetrano olive, carmelized onion, and arugula
   * Expected output: 15
 
-Each meat or additional cheese topping will add $2 to a magro pizza
+Each meat or additional cheese topping will add $2 to a magro size pizza
   * Example input: Magro pizza with pancetta, taleggio, and roasted leek
   * Expected output: 17
 
-Toppings for a medium pizza will be 1.5x the magro pizza topping price
+Toppings for a mezzano size pizza will be 1.5x the magro size pizza topping price
   * Example input: Mezzano pizza with calabrese salami, pecorino romano, garlic, and arugula
   * Expected output: 25
 
-Toppings for a large pizza will be 2x the magro pizza topping price
+Toppings for a grasso size pizza will be 2x the magro size pizza topping price
   * Example input: Grasso pizza with fennel sausage, goat cheese, potato, and pickled ramp
   * Expected output: 32
 

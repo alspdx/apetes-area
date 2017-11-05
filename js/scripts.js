@@ -50,8 +50,10 @@ Pizza.prototype.toppingsOutput = function() {
     toppingsBeforeAnd.push(toppings[i]);
   }
   var output = "You ordered a " + this.size + " size";
-  if (toppings.length > 0) {
+  if (toppings.length > 1) {
     output += " pizza with " + toppingsBeforeAnd.join(", ") + " and " + toppings[toppings.length - 1] + ".";
+  } else if (toppings.length = 1) {
+    output += " pizza with " + toppings[toppings.length - 1] + "."
   } else {
     output += " plain cheese pizza."
   }
